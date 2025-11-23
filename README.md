@@ -35,16 +35,10 @@ curl "http://localhost:8080/team/get?team_name=avito"
 ```
 
 ```bash
-# ✅ Успешное получение PR (пользователь u2 назначен ревьювером)
+# ✅ Успешное получение PR 
 curl "http://localhost:8080/users/getReview?user_id=u2"
 ```
 
 ```bash
-# ✅ Пользователь без PR (u4 не назначен ревьювером)
 curl "http://localhost:8080/users/getReview?user_id=u4"
-```
-
-```bash
-# ✅ Пользователь без PR (u4 не назначен ревьювером)
-curl "http://localhost:8080/team/get?team_name=avito"
 ```
