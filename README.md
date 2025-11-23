@@ -25,20 +25,21 @@ docker-compose up --build
 Далее перейдите в Postman и опробуйте работоспособность приложения:
 
 ```bash
-# ✅ Ping сервиса
+# ✅ Ping сервиса (HEAD)
 curl "http://localhost:8080/healthcheck"
 ```
 
 ```bash
-# ✅ Успешное получение команды
+# ✅ Успешное получение команды (GET)
 curl "http://localhost:8080/team/get?team_name=avito"
 ```
 
 ```bash
-# ✅ Успешное получение PR 
+# ✅ Успешное получение PR (GET)
 curl "http://localhost:8080/users/getReview?user_id=u2"
 ```
 
 ```bash
+(GET)
 curl "http://localhost:8080/users/getReview?user_id=u4"
 ```
