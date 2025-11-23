@@ -1,5 +1,3 @@
--- +goose Up
--- +goose StatementBegin
 CREATE TABLE teams
 (
     team_name TEXT primary key
@@ -45,12 +43,3 @@ VALUES ('pr-1001', 'Add search', 'u1', 'OPEN'),
 INSERT INTO pull_request_reviewers (pull_request_id, user_id)
 VALUES ('pr-1001', 'u2'),
        ('pr-1002', 'u4');
--- +goose StatementEnd
-
--- +goose Down
--- +goose StatementBegin
-DROP TABLE pull_request_reviewers;
-DROP TABLE pull_requests;
-DROP TABLE reviewers;
-DROP TABLE teams;
--- +goose StatementEnd
